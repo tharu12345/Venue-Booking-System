@@ -1,15 +1,15 @@
 import React from 'react';
 import {Text,View,Image, StyleSheet} from 'react-native';
-   
- const Women = () => {
+
+ const Women= () => {
     return (
         <>
     
           <View style ={styles.container}>
-                 <Image style={styles.pic3} source={require('./../asset/pic3.jpg')}/>
-                 <Text style={{fontSize:40, top:180}}>RS.2500</Text> 
-                <Image style={styles.pic7} source={require('./../asset/pic7.jpg')}/> 
-                <Text style={{fontSize:40, top:180}}>RS.2500</Text> 
+                 <Image style={styles.pic20} source={require('./../asset/pic20.jpg')}/>
+                 <Text style={{fontSize:20, top:0,left:70}}>RS.1500</Text> 
+                <Image style={styles.pic21} source={require('./../asset/pic21.jpg')}/> 
+                <Text style={{fontSize:20, top:0,left:70}}>RS.1800</Text> 
           
 
            </View>
@@ -28,16 +28,19 @@ import {Text,View,Image, StyleSheet} from 'react-native';
         alignItems:"center",
         height : "100%"
     },
-  pic3: {
-        width:"30%",
-        height:90,
+  pic20: {
+         width:"50%",
+         height:200,
+         right:75,
+         top:70,
 
 
     },
-    pic7 : {
-      width:"80%",
-      height:100,
-       
+    pic21 : {
+        width:"50%",
+        height:200,
+        right:75,
+        top:70,
   
   },
  });

@@ -1,31 +1,35 @@
-import React from 'react';
-import {Text,View,Image, StyleSheet, TouchableOpacity,Button} from 'react-native';
+import React, { Component } from 'react';
+import {Text,View,Image, StyleSheet, TouchableOpacity,} from 'react-native';
 
- const app1 = () => {
-    return (
-        <>
-    
-          <View style ={styles.container}>
-                 <Image style={styles.pic14} source={require('./asset/pic14.png')}/>
-                <Image style={styles.pic8} source={require('./asset/pic8.jpg')}/> 
-         <TouchableOpacity style={styles.button}>
+export default class home extends Component {
+onbutton1 = () => {this.props.navigation.navigate("login");};
+onbutton2 = () => {this.props.navigation.navigate('register');};
 
-                  <Text>rejister</Text>
-                 </TouchableOpacity> 
 
-         <TouchableOpacity style={styles.button}>
+    render(){
+       return (
+       <View style ={styles.container}>
 
-                  <Text>login</Text>
-                </TouchableOpacity>
+        <Image style={styles.pic14} source={require('../asset/pic23.jpg')}/>
+       <Image style={styles.pic8} source={require('../asset/pic22.jpg')}/> 
 
-           </View>
+      <TouchableOpacity onPress={this.onbutton1}
+      style={styles.button1}>
+      <Text style={{fontSize: 19}}>LOGIN</Text>
+        </TouchableOpacity>
 
-           </>
-           
-          
+        <TouchableOpacity onPress={this.onbutton2}
+      style={styles.button2}>
+      <Text style={{fontSize: 19}}>REGISTER</Text>
+        </TouchableOpacity>
+ 
+ </View>    
+         
+                    
         
     );
  };
+}
  const styles = StyleSheet.create({
 
     container:{ 
@@ -40,22 +44,30 @@ import {Text,View,Image, StyleSheet, TouchableOpacity,Button} from 'react-native
          
     
     },
-    button: {
-      width: '65%',
+    button1: {
+      width: '55%',
       backgroundColor:'#ffffff',
       padding:20,
-      margin:20,
+      margin:15,
       justifyContent:'center',
       alignItems:'center',
+      height:50,
 
+    },
+    button2: {
+      width: '55%',
+      backgroundColor:'#ffffff',
+      padding:20,
+      margin:1,
+      justifyContent:'center',
+      alignItems:'center',
+      height:50,
 
     },
     pic14 : {
       width:"100%",
       height:100,
-       
+    
   
   },
  });
-
-export default app1;

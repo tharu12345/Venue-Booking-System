@@ -1,62 +1,52 @@
-import React from 'react';
-import {Text,View,Image, StyleSheet, TouchableOpacity,Button, TextInput} from 'react-native';
+import React, { Component } from 'react';
+import {Text,View,Image, StyleSheet, TouchableOpacity,TextInput} from 'react-native';
 
- const Login = () => {
-    return (
-        <>
+export default class login extends Component {
+onbutton3 = () => {this.props.navigation.navigate('homepage');};
    
+         render(){
+          return (
           <View style ={styles.container}>
-                 <Text>Login</Text>
                  <Image style={styles.pic13} source={require('../asset/pic6.png')}/>
                  <TextInput style={styles.TextInput}placeholder="Enter your email adress"/>
                  <TextInput style={styles.TextInput}placeholder="Enter your password"/>
         
-         <TouchableOpacity style={styles.button}>
-
-                  <Text>Login</Text>
-                 </TouchableOpacity> 
-
-         
-
-           </View>
-
-           </>
+                 <TouchableOpacity onPress={this.onbutton3}
+                 style={styles.button3}>
+                <Text style={{fontSize: 19}}>LOGIN</Text>
+                   </TouchableOpacity>
+           </View>     
            
-          
-        
     );
  };
- const styles = StyleSheet.create({
+ }
 
+ const styles = StyleSheet.create({
     container:{ 
         flex:1,
         backgroundColor :"#009CA1",
         alignItems:"center",
         height : "100%"
     },
-         
-    textInput: {
-      width:'80%',
-      
-
-    },
-  
-    button: {
-      width: '65%',
-      backgroundColor:'#ffffff',
-      padding:20,
-      margin:20,
+      TextInput: {
+      width:'50%',
+      top:60,
       justifyContent:'center',
       alignItems:'center',
-
-
+    },
+    button3: {
+      width: '55%',
+      backgroundColor:'#ffffff',
+      padding:20,
+      margin:80,
+      justifyContent:'center',
+      alignItems:'center',
+      borderRadius:50,
+      height:50,
     },
     pic13 : {
       width:"70%",
       height:250,
-       
-  
+      top:50
   },
  });
-
-export default Login;

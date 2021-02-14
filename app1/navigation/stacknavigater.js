@@ -1,22 +1,56 @@
-import{createAppcontainer}from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
-import app1 from '../screens/home';
-import Register from '../screens/new';
+import home from '../screens/home';
+import login from '../screens/login';
+import register from '../screens/register';
+import homepage from '../screens/homepage';
+import catogory from '../screens/catogory';
+import offers from '../screens/offers';
+import women from '../screens/women';
+import mens from '../screens/mens';
+import kids from '../screens/kids';
+import schools from '../screens/schools';
 
 const MainNavigator = createStackNavigator(
     {
-        Home: {
-            screen:Home,  
+        home: {
+            screen:home,
         },
-        login:{
-            screen:new,
-        },   
+        login: {
+            screen:login,
+        },
+        register: {
+            screen:register,
+        },
+        homepage: {
+            screen:homepage,
+        },
+        catogory: {
+            screen:catogory,
+        },
+        offers: {
+            screen:offers,
+        },
+        women: {
+            screen:women,
+        },
+        mens: {
+            screen:mens,
+        },
+        kids: {
+            screen:kids,
+        },
+        schools:{
+            screen:schools,
+        }
     },
     {
-        initialRouteName: 'home'
+        initialRouteName: 'home',
     },
+
 );
 
-const App = createAppcontainer(MainNavigator);
+const App = createAppContainer(MainNavigator);
+
 export default App;
