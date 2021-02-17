@@ -6,9 +6,20 @@ onbutton1 = () => {this.props.navigation.navigate('offers');};
 render(){
     return (
            <View style ={styles.container}>
+                 <Text style={{fontSize:25, top:20,width:"70%",height:150, backgroundColor:"#ffffff",padding:20,
+                 margin:20,justifyContent:'center', alignItems:'center',top:40,
+                 borderRadius:30,}}>Cash Discount For School Bags 10% </Text> 
                  
-        
-           </View>     
+                 
+
+           <Text style={{fontSize:25, top:20,width:"70%",height:160, backgroundColor:"#ffffff",padding:20,
+                 margin:20,justifyContent:'center', alignItems:'center',top:50,
+                 borderRadius:30,}}>Dilivery Free Reduce 15%</Text>
+
+           </View>    
+           
+           
+           
                    
     );
 };
@@ -21,6 +32,7 @@ const styles = StyleSheet.create({
        alignItems:"center",
        height : "100%"
     },
+   
 });
 
            

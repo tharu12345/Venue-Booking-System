@@ -1,4 +1,4 @@
-const bags =[
+const bag3=[
     {
         id:"0001",
         name:'school bag',
@@ -80,4 +80,4 @@ const bags =[
         about:'high quality',
     },
     ]
-export default bags;
+export default bag3;

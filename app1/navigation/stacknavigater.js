@@ -11,6 +11,11 @@ import women from '../screens/women';
 import mens from '../screens/mens';
 import kids from '../screens/kids';
 import schools from '../screens/schools';
+import selectandrequest  from '../screens/selectandrequest';
+import thank from '../screens/thank';
+
+
+
 
 const MainNavigator = createStackNavigator(
     {
@@ -43,6 +48,12 @@ const MainNavigator = createStackNavigator(
         },
         schools:{
             screen:schools,
+        },
+        selectandrequest:{
+            screen:selectandrequest,
+        },
+        thank:{
+            screen:thank,
         }
     },
     {

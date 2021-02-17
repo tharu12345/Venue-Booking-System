@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {FlatList,StyleSheet,Text,View,TextInput,Image,} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import bags from '../configs/bag';
 
@@ -60,6 +61,7 @@ const styles = StyleSheet.create({
 })
 
 export default class flatListBg extends Component {
+    onselectandrequest= () => {this.props.navigation.navigate("selectandrequest")};
     render(){
         return(
             <View style={{flex:1, marginTop:"2%", }}>
@@ -68,6 +70,10 @@ export default class flatListBg extends Component {
               <TextInput placeholder="Search"/>
             </View>
             <View>
+
+            <TouchableOpacity
+            onPress={this.onselectandrequest}
+            >
              <FlatList data={bags}
                 renderItem={({item, index})=>{
                     return (
@@ -76,6 +82,8 @@ export default class flatListBg extends Component {
                     index={index}> 
                     </FlatListItem>);
                 }}/>
+
+             </TouchableOpacity>
             </View>
             </View>
         )

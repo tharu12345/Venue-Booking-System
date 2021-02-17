@@ -1,26 +1,33 @@
-import React from 'react';
-import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import {Text,View,Image, StyleSheet, TouchableOpacity,TextInput} from 'react-native';
 
- const Select= () => {
-   return (
+export default class selectandrequest extends Component {
+onbutton3 = () => {this.props.navigation.navigate('selectandrequest');};
+onbutton8 = () => {this.props.navigation.navigate('thank');};
+   
+         render(){
+          return (
      <>
-     
           <View style ={styles.container}>
+
           <TextInput style={styles.TextInput1}placeholder="User name"/>
-          <TextInput style={styles.TextInput2}placeholder="Item code"/>
-          <TextInput style={styles.TextInput3}placeholder="Price"/>
-          <TextInput style={styles.TextInput4}placeholder="Request"/>
+          <TextInput style={styles.TextInput2}placeholder="Dilivery address"/>
+          <TextInput style={styles.TextInput3}placeholder="Item code"/>
+          <TextInput style={styles.TextInput4}placeholder="Messages"/>
 
-          <TouchableOpacity style={styles.button}>
+         
+          <TouchableOpacity onPress={this.onbutton8}
+      style={styles.button8}>
+      <Text style={{fontSize: 19}}>Send</Text>
+        </TouchableOpacity>
 
-            <Text>Send</Text>
-          </TouchableOpacity>
           
           
 
         </View>
         </>
    );
+   };
  }
  const styles = StyleSheet.create({
     container:{ 
@@ -31,8 +38,8 @@ import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'reac
     },
   TextInput1:{
       width:"80%",
-      height:80,
-      top:80,
+      height:70,
+      top:0,
       backgroundColor:"#ffffff",
       padding:20,
       margin:20,
@@ -44,8 +51,8 @@ import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'reac
     },
     TextInput2:{
       width:"80%",
-      height:80,
-      top:60,
+      height:70,
+      top:0,
       backgroundColor:"#ffffff", 
       padding:20,
       margin:20,
@@ -57,8 +64,8 @@ import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'reac
     },
       TextInput3:{
         width:"80%",
-        height:80,
-        top:40,
+        height:70,
+        top:0,
         backgroundColor:"#ffffff",
         padding:20,
         margin:20,
@@ -70,8 +77,8 @@ import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'reac
     },
     TextInput4:{
       width:"80%",
-      height:80,
-      top:20,
+      height:70,
+      top:0,
       backgroundColor:"#ffffff",
       padding:20,
       margin:20,
@@ -91,10 +98,23 @@ import {Text,View,Image,StyleSheet,TextInput,Button,TouchableOpacity} from 'reac
       borderRadius:45,
       height:25,
       width:'50%',
-      backgroundColor:'#D52727',
       borderColor: '#000000',
+      backgroundColor: '#848484',
+
+
     },
+    button8: {
+      padding:25,
+      margin:15,
+      justifyContent:'center',
+      alignItems:'center',
+      borderWidth: 1,
+      borderRadius:45,
+      height:25,
+      width:'50%',
+      borderColor: '#000000',
+      backgroundColor: '#848484',
 
 
+    },
  });
- export default Select;

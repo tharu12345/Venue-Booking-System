@@ -13,22 +13,22 @@ export default class category extends Component{
       <View style ={styles.container}>
 
       <View style={styles.Brow}>
-      <Image source={Images.pic3} style={styles.ImagesContainer}>
+      <Image source={Images.pic2} style={styles.ImagesContainer}>
       </Image>
           <TouchableOpacity 
           onPress={this.button1} 
           style={styles.button1}>
-          <Text>Women</Text>
+          <Text>men</Text>
           </TouchableOpacity>
       </View>
       
       <View style={styles.Brow}>
-      <Image source={Images.pic2} style={styles.ImagesContainer}>
+      <Image source={Images.pic3} style={styles.ImagesContainer}>
       </Image>
           <TouchableOpacity 
           onPress={this.button2} 
           style={styles.button1}>
-          <Text>Men</Text>
+          <Text>women</Text>
           </TouchableOpacity>
       </View>
        
